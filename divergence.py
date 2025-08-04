@@ -1,0 +1,10 @@
+import sympy as sp
+x,y,z=sp.symbols('x,y,z')
+f1=input("enter the fucntion 1: ")
+f2=input("enter fucntion 2: ")
+f3=input('enter the fucntion 3 : ')
+d1,d2,d3=sp.diff(f1,x),sp.diff(f2,y),sp.diff(f3,z)
+print("divergence is: ",d1+d2+d3)
+x1,y1,z1=input("enter points: ").split()
+d1,d2,d3=d1.subs({x:x1,y:y1,z:z1}),d2.subs({x:x1,y:y1,z:z1}),d3.subs({x:x1,y:y1,z:z1})
+print("the divergence at point is : ",d1+d2+d3)
